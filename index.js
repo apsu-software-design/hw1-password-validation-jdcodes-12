@@ -22,9 +22,10 @@ function promptUserForPassword(){
     
     rl.question(prompt, (password) => {
        if(checkBaseCase(password) === false) {
-          console.log("Closing input stream and exiting terminal...")
+          console.log("Preparing to close input stream and exit terminal...")
           rl.close();
-          console.log("Input stream closed... Goodbye!")
+          console.log("Input stream closed...")
+          console.log("Exiting terminal... Goodbye!")
           process.exit(1);
        }
 
